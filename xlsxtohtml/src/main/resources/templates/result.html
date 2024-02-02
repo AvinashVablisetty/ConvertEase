@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Conversion Result</title>
+</head>
+<body>
+    <h2>Conversion Result</h2>
+    <a th:href="@{/download}" download="output.html">Download HTML File</a>
+
+    <!-- Display HTML content -->
+    <div th:utext="${htmlContent}"></div>
+</body>
+</html>

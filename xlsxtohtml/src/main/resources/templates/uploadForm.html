@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fd5c63; /* Set your preferred background color */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .upload-container {
+            background-color: #FBCEB1;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 500px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            font-family: 'Monospace';
+        }
+
+        h2 {
+            color: #808080;
+            font-family: 'Monospace';
+            font-style: italic;
+            font-size: 16px; /* Set your preferred font size */
+            margin-top: 10px; /* Adjust the margin-top as needed */
+        }
+
+        input[type="file"] {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        button {
+            margin-top: 30px;
+            background-color: #4caf50;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="upload-container">
+        <h1>XLSX to HTML</h1>
+        <h2>Convert XLSX files to HTML in seconds. You can navigate between the sheets too!</h2>
+        <form th:action="@{/}" method="post" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <button type="submit">Convert and Download</button>
+        </form>
+    </div>
+</body>
+</html>
